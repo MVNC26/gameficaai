@@ -1,12 +1,12 @@
 /* utilizando fontes especificas */
-    @font-face{
-        font-family: "montserrat";
-        src: url(FONTES/Montserrat/Montserrat-VariableFont_wght.ttf)
-    }
+@font-face {
+    font-family: "montserrat";
+    src: url(FONTES/Montserrat/Montserrat-VariableFont_wght.ttf)
+}
 
-:root{
-        --roxo_gamefica: #47208b;
-        --laranja-gamefica: #f06638;
+:root {
+    --roxo_gamefica: #47208b;
+    --laranja-gamefica: #f06638;
 
 }
 
@@ -18,7 +18,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -95,21 +95,59 @@ header img {
 
     height: calc(100vh - 280px);
     display: flex;
-    align-items: center ;
+    align-items: center;
 }
 
-.conteudo-banner p{
-    
+
+.conteudo-banner p {
+
     color: white;
     font-family: "Anta";
     font-size: 32px;
 
 }
 
+.conteudo-banner span{
+    display: block;
+
+    overflow: hidden;
+
+    border-right: 6px solid var(--laranja-gamefica);
+    white-space: nowrap;
+
+    animation: 
+        digitando 2s steps(40, end),
+        cursor 0.75s step-end infinite
+    ;
+}
+
+
+@keyframes digitando{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes cursor{
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50%{
+        border-color: var(--laranja-gamefica);
+
+    }
+
+}
+
 #sobre {
 
     height: 800px;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -118,45 +156,45 @@ header img {
     padding: 100px 25%;
 }
 
-h2{
-    
+h2 {
+
     font-family: "Anta";
     font-size: 28px;
 }
 
 
-#sobre p{
+#sobre p {
     font-size: 17px;
 
     text-align: left;
 }
 
-#cases{
+#cases {
     text-align: center;
     padding-bottom: 100px;
 
 }
 
-#cases h2{
+#cases h2 {
     margin-bottom: 70px;
 
 
 }
 
-.container-cards{
+.container-cards {
     width: 100%;
 
     display: flex;
     justify-content: space-between;
 }
 
-.card{
+.card {
     height: 400px;
     width: 250px;
-    
+
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 
     background-color: var(--roxo_gamefica);
@@ -166,54 +204,54 @@ h2{
 
     border-radius: 4px;
 
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
-    
-}   
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 
-.card img{
-    height: 55%;
-    width: 100%;
-    
-    border-radius: 4px 4px 0px 0px;
-    
 }
 
-.card p{
+.card img {
+    height: 55%;
+    width: 100%;
+
+    border-radius: 4px 4px 0px 0px;
+
+}
+
+.card p {
 
     padding: 7%;
     text-align: left;
     font-size: 16px;
     color: #ffffff;
-    font-family: "Montserrat" 
-    
+    font-family: "Montserrat"
+
 }
 
-.card button{
+.card button {
 
     width: 90%;
     height: 40px;
 
-    background-color: var(--laranja-gamefica) ;
+    background-color: var(--laranja-gamefica);
 
     border: none;
-    border-radius: 4px 4px 4px 4px ;
+    border-radius: 4px 4px 4px 4px;
 
     font-family: "Montserrat";
     font-size: 17px;
-    
+
     font-weight: 600;
     cursor: pointer;
     color: #ffffff;
 
 }
 
-.card button:hover{
+.card button:hover {
 
     background-color: #ad4929;
 
 }
 
-#portfolio{
+#portfolio {
     height: 250px;
     margin-bottom: 120px;
 
@@ -226,7 +264,7 @@ h2{
     position: relative;
 }
 
-#portfolio .container-grid{
+#portfolio .container-grid {
     height: 100%;
 
     display: flex;
@@ -236,7 +274,7 @@ h2{
 
 }
 
-#portfolio a{
+#portfolio a {
     width: fit-content;
     font-family: "Anta";
     font-size: 28px;
@@ -247,7 +285,7 @@ h2{
 
 }
 
-.filtro{
+.filtro {
     height: 100%;
     width: 100%;
 
@@ -255,138 +293,182 @@ h2{
 
     position: absolute;
     top: 0;
-    
+
 }
 
-#portfolio a:hover{
-    transform: scale(1.05);   
+#portfolio a:hover {
+    transform: scale(1.05);
 }
 
-#contato{
+#contato {
     text-align: center;
 
     padding-bottom: 100px;
     margin-bottom: 100px;
 }
 
-    #contato h2{
-        margin-bottom: 70px;
-    }
+#contato h2 {
+    margin-bottom: 70px;
+}
 
-    #contato form{
-        width: 50%;
-        margin: 0 auto;
-        padding: 60px 0;
+#contato form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 60px 0;
 
-        border-radius: 80px;
+    border-radius: 80px;
 
-        background-color: var(--roxo_gamefica);
-        color: white;
+    background-color: var(--roxo_gamefica);
+    color: white;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        font-family: "Montserrat";
-    }
+    font-family: "Montserrat";
+}
 
-    #contato form label{
-        margin-bottom: 15px;
-        font-size: 17px;
-    }
+#contato form label {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
 
-    .campo{
-        width: 60%;
-        margin-bottom: 50px;
+.campo {
+    width: 60%;
+    margin-bottom: 50px;
 
-        text-align: left;
+    text-align: left;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    }
+}
 
-    .campo input{
-        height: 40px;
+.campo input {
+    height: 40px;
 
-        color: white;
-        background-color: #351868;
+    color: white;
+    background-color: #351868;
 
-        border: none;
-        border-radius: 4px;
+    border: none;
+    border-radius: 4px;
 
-        outline: none ;
-        text-indent: 10px;
+    outline: none;
+    text-indent: 10px;
 
-        font-family: "Montserrat";
-        font-size: 17px;
-        
-    }
+    font-family: "Montserrat";
+    font-size: 17px;
 
-
-    .campo-textarea{
-        width: 60%;
-        margin-bottom: 30px;
-
-        text-align: left;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-    }
-
-    .campo-textarea textarea{
-        color: white;
-        background-color: #351868;
-
-        border: none ;
-        border-radius: 4px;
-
-        padding: 10px;
-
-        font-family: "MOntserrat";
-        font-size: 17px;
-
-        outline: none;
-
-        resize: none;
-    }
-
-    .campo input:focus,.campo-textarea textarea:focus{
-        outline: 2px solid var(--laranja-gamefica);
-    }
+}
 
 
+.campo-textarea {
+    width: 60%;
+    margin-bottom: 30px;
 
-    #contato form button{
-        height: 40px;
-        width: 60%;
+    text-align: left;
 
-        font-family: "MOntserrat";
-        font-size: 17px;
-        font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-        color: white;
-        background-color: var(--laranja-gamefica);
+}
 
-        border:none;
-        border-radius: 4px;
-        
-        text-transform: uppercase;
-        cursor: pointer;
+.campo-textarea textarea {
+    color: white;
+    background-color: #351868;
 
-        transition: backgroud-color 500ms ease;
-    }
+    border: none;
+    border-radius: 4px;
 
-    #contato form button:hover{
-        background-color: #ad4929;
-    }
+    padding: 10px;
+
+    font-family: "MOntserrat";
+    font-size: 17px;
+
+    outline: none;
+
+    resize: none;
+}
+
+.campo input:focus,
+.campo-textarea textarea:focus {
+    outline: 2px solid var(--laranja-gamefica);
+}
 
 
 
+#contato form button {
+    height: 40px;
+    width: 60%;
 
+    font-family: "MOntserrat";
+    font-size: 17px;
+    font-weight: 600;
 
+    color: white;
+    background-color: var(--laranja-gamefica);
 
-    
+    border: none;
+    border-radius: 4px;
+
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: backgroud-color 500ms ease;
+}
+
+#contato form button:hover {
+    background-color: #ad4929;
+}
+
+#contato form input ::placeholder,
+#contato form textarea ::placeholder {
+    color: #b9b9b9;
+}
+
+footer {
+    height: 290px;
+    background-color: var(--roxo_gamefica);
+}
+
+footer .container-grid {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociais {
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.redes-sociais p {
+    color: white;
+
+    font-family: "Anta";
+    font-size: 24px;
+}
+
+.icones-redes{
+    width: 240px;
+
+    display:flex;
+    justify-content: space-between;
+}
+
+.icones-redes a{
+    color: white;
+}
+
+.icones-redes a:hover{
+    color:var(--laranja-gamefica);
+
+}
